@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Poland Itinerary – Aug 7–15, 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #2c3e50;
+    --accent:  #e67e22;
+    --secondary: #16a085;
+    --bg-light: #f9f9f9;
+    --gray-light: #ecf0f1;
+    --hours-color: #d35400;
+    --warning: #e74c3c;
+  }
+  body { 
+    margin:0; 
+    padding:20px; 
+    font-family:'Open Sans',sans-serif; 
+    background:var(--bg-light); 
+    color:var(--primary); 
+    line-height:1.6; 
+    background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+  }
+  .container { 
+    display: flex; 
+    flex-direction: column; 
+    max-width:1200px; 
+    margin:0 auto; 
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50, #1a2530);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  h1 { 
+    font-family:'Montserrat',sans-serif; 
+    font-size:2.5em; 
+    margin: 10px 0;
+    background: linear-gradient(to right, #ffffff, #e67e22);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+  }
+  .toc { 
+    background:#fff; 
+    padding:15px; 
+    border:1px solid var(--gray-light); 
+    border-radius:8px; 
+    box-shadow:0 2px 8px rgba(0,0,0,0.05); 
+    margin-bottom:20px; 
+  }
+  .toc h2 { 
+    font-family:'Montserrat',sans-serif; 
+    margin-top:0; 
+    font-size:1.25em; 
+    color:var(--primary); 
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 4px;
+  }
+  .toc ul { list-style:none; padding:0; margin:0; }
+  .toc li { padding: 8px 0; border-bottom: 1px solid #eee; }
+  .toc li:last-child { border-bottom: none; }
+  .toc a { 
+    color:var(--accent); 
+    text-decoration:none; 
+    font-weight:600; 
+    display: block;
+    padding: 5px;
+    transition: all 0.3s;
+  }
+  .toc a:hover {
+    background: #f9f9f9;
+    border-radius: 4px;
+    padding-left: 10px;
+  }
+  .day-section { 
+    border:1px solid var(--gray-light); 
+    border-radius:12px; 
+    box-shadow:0 5px 15px rgba(0,0,0,0.08); 
+    padding:25px; 
+    margin:25px 0;
+    background: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .day-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  .day-section:nth-of-type(even) { 
+    background: #f8f9fa; 
+  }
+  h2 { 
+    font-family:'Montserrat',sans-serif; 
+    color:var(--primary); 
+    font-size:1.8em; 
+    margin-top:0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+  }
+  h2 i {
+    margin-right: 10px;
+    background: var(--accent);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-container { 
+    position:relative; 
+    width:100%; 
+    padding-bottom:56.25%; 
+    margin:20px 0; 
+    border:2px solid var(--accent); 
+    border-radius:8px; 
+    overflow:hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .map-container iframe { 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    border:0; 
+  }
+  .itinerary-item {
+    padding: 12px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    display: flex;
+  }
+  .itinerary-item:last-child {
+    border-bottom: none;
+  }
+  .time {
+    font-weight: bold;
+    min-width: 70px;
+    color: var(--secondary);
+  }
+  .activity {
+    flex: 1;
+  }
+  .tips { 
+    background:var(--secondary); 
+    color:#fff; 
+    border-left:4px solid var(--accent); 
+    padding:15px; 
+    border-radius:8px; 
+    margin-top:15px; 
+  }
+  .tips ul { list-style:none; padding:0; margin:0; }
+  .tips li { 
+    position:relative; 
+    padding-left:25px; 
+    margin-bottom:10px;
+    line-height: 1.5;
+  }
+  .tips li:last-child { margin-bottom: 0; }
+  .tips li::before { 
+    content:"\f05a"; 
+    font-family:"Font Awesome 5 Free"; 
+    font-weight:900; 
+    position:absolute; 
+    left:0; 
+    color: #fff;
+  }
+  .hours { 
+    color: var(--hours-color); 
+    font-weight: 600; 
+    background: rgba(211, 84, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    margin-left: 8px;
+  }
+  .activity-highlight { 
+    background-color: rgba(255, 248, 225, 0.7); 
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    border-left: 3px solid var(--accent); 
+    font-weight: 600;
+    display: inline-block;
+  }
+  .warning-box { 
+    background-color:#fdecea; 
+    border-left:4px solid var(--warning); 
+    padding:15px; 
+    border-radius:4px; 
+    margin:15px 0; 
+  }
+  .warning-title { 
+    color:var(--warning); 
+    font-weight:700; 
+    margin-top:0; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .timeline { 
+    display:flex; 
+    flex-wrap:wrap; 
+    gap:15px; 
+    margin-bottom:20px; 
+  }
+  .timeline-item { 
+    flex:1; 
+    min-width:250px; 
+    background:white; 
+    padding:15px; 
+    border-radius:8px; 
+    border:1px solid #eee;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+  .location-link {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+  .location-link:hover {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+  }
+  .booking-link {
+    color: var(--hours-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .booking-link:hover {
+    text-decoration: underline;
+  }
+  .description {
+    font-style: italic;
+    color: #555;
+    font-size: 0.95em;
+    margin: 3px 0 10px 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    .timeline {
+      flex-direction: column;
+    }
+    .itinerary-item {
+      flex-direction: column;
+    }
+    .time {
+      margin-bottom: 5px;
+    }
+  }
+  
+  /* Print styles */
+  @media print { 
+    .map-container, .toc { display:none; } 
+    .day-section { 
+      box-shadow:none; 
+      border: 1px solid #ddd;
+      page-break-after: always; 
+      break-after: avoid-page; 
+    }
+    .header {
+      background: white;
+      color: black;
+    }
+    h1 {
+      background: black;
+      -webkit-text-fill-color: black;
+      color: black;
+      text-shadow: none;
+    }
+  }
+
+/* Adjust Optional Visits layout */
+.optional-visits h3 {
+  white-space: nowrap;
+  width: 100%;
+}
+
+.itinerary-item.optional {
+  display: flex;
+  align-items: flex-start;
+}
+
+.itinerary-item.optional .activity {
+  flex: 0 0 275px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itinerary-item.optional .description {
+  flex: 1;
+  padding-left: 16px;
+}
+
+/* Optional Visits: title row and description underneath, condensed */
+.optional-visits .itinerary-item.optional {
+    display: block;
+    padding: 4px 0;
+}
+.optional-visits .itinerary-item.optional .activity {
+    display: block;
+    white-space: normal;
+    margin-bottom: 4px;
+}
+.optional-visits .itinerary-item.optional .description {
+    margin-left: 16px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+
+  .optional-visits {
+    background-color: #eef6ff !important;
+    padding: 12px 16px !important;
+    margin-top: 20px !important;
+    border-radius: 10px !important;
+    border: 1px solid #b0c4de !important;
+  }
+  .optional-visits h3 {
+    background-color: #d0e4ff !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    font-size: 1.1em !important;
+    margin-bottom: 10px !important;
+  }
+  .optional-visits .itinerary-item.optional {
+    padding: 4px 0 !important;
+    margin-bottom: 6px !important;
+  }
+  .optional-visits .description {
+    font-size: 0.9em !important;
+    color: #333 !important;
+    margin-left: 18px !important;
+    margin-top: 2px !important;
+  }
+    
+
+  .main-visits-wrapper {
+    background-color: #f3f3f3;
+    border: 2px solid #b0c4de;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+
+  .tips {
+    background-color: #e6f9e6 !important;
+    color: #1e3d1e !important;
+    border-left: 4px solid #81c784 !important;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>Poland Adventure Itinerary</h1>
+<div class="subtitle">Aug 7–15, 2025 | One Adult, Two Kids (13 & 15)</div>
+<div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+<div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px;">
+<i class="fas fa-map-marker-alt"></i> Kraków & Zakopane
+      </div>
+<div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px;">
+<i class="fas fa-hiking"></i> Mountains & Nature
+      </div>
+<div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px;">
+<i class="fas fa-utensils"></i> Local Cuisine
+      </div>
+<div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px;">
+<i class="fas fa-sun"></i> Day:22-28°C • Mtn:10-18°C
+      </div>
+</div>
+</div>
+<div class="toc">
+<h2><i class="fas fa-list"></i> Table of Contents</h2>
+<ul>
+<li><a href="#Day_1">Day 1 – Arrival in Kraków</a></li>
+<li><a href="#Day_2">Day 2 – Wawel Castle & Shopping</a></li>
+<li><a href="#Day_3">Day 3 – Energylandia Theme Park</a></li>
+<li><a href="#Day_4">Day 4 – Salt Mine & Zakopane Transfer</a></li>
+<li><a href="#Day_5">Day 5 – Slovakia Adventure</a></li>
+<li><a href="#Day_6">Day 6 – Mountain Views & Zakopane Fun</a></li>
+<li><a href="#Day_7">Day 7 – Morskie Oko Hike</a></li>
+<li><a href="#Day_8">Day 8 – River Rafting</a></li>
+<li><a href="#Day_9">Day 9 – Return & Departure</a></li>
+</ul>
+</div>
+<!-- Day 1 -->
+<div class="day-section" id="Day_1">
+<h2><i class="fas fa-plane-arrival"></i> Day 1 – Aug 7 (Wed): Arrival in Kraków</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=50.0777,19.7848&destination=Orlen+Kamienkiego+Krakow&mode=driving&waypoints=Avanti+Palazzo+Boutique+Hotel+Krakow|Main+Market+Square+Krakow|Masala+Madness+Krakow&zoom=12" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">18:00</div>
+<div class="activity">✈️ Arrive at <a class="location-link" href="https://www.google.com/maps/search/Krakow+Airport+KRK" target="_blank">Kraków Airport (KRK)</a> <span class="hours">(open 24/7)</span></div>
+</div><div class="itinerary-item">
+<div class="time">19:00</div>
+<div class="activity">🏨 Check-in at <a class="location-link" href="https://www.google.com/maps/search/Avanti+Palazzo+Boutique+Hotel+Krakow" target="_blank">Avanti Palazzo Boutique Hotel</a></div>
+</div><div class="itinerary-item">
+<div class="time">20:00</div>
+<div class="activity">🌆 Evening walk at <a class="location-link" href="https://www.google.com/maps/search/Main+Market+Square+Krakow" target="_blank">Main Market Square</a></div>
+</div><div class="description">Europe’s largest medieval town square, surrounded by historic townhouses, cafes, and street performers. Visit the Cloth Hall for local crafts and catch the hourly trumpet call from St. Mary’s Basilica tower.</div><div class="itinerary-item">
+<div class="time">20:30</div>
+<div class="activity">🍽 Dinner at <a class="location-link" href="https://www.google.com/maps/search/Masala+Madness+Krakow" target="_blank">Masala Madness</a> <span class="hours">(12:00–22:00)</span></div>
+</div></div><div class="optional-visits"><h3 style="font-weight:bold; background-color:#f9f9f9; padding:8px; border-radius:4px; margin-bottom:8px;white-space:nowrap; width:100%;">Optional Visits</h3><div class="itinerary-item optional"><div class="activity">🏙️ <a class="location-link" href="https://www.google.com/maps/search/Kazimierz+Jewish+Quarter+Krakow" target="_blank">Kazimierz Jewish Quarter</a> <span class="hours">(Always open)</span></div><div class="description">Historic district dotted with art galleries, synagogues, and cozy cafes.</div></div><div class="itinerary-item optional"><div class="activity">🏭 🏛️ <a class="location-link" href="https://www.google.com/maps/search/Oskar+Schindler%E2%80%99s+Enamel+Factory+Museum+Krakow" target="_blank">Oskar Schindler’s Enamel Factory Museum</a> <span class="hours">(10:00–18:00)</span></div><div class="description">Original enamel factory transformed into a WWII museum showcasing Schindler’s story.</div></div><div class="itinerary-item optional"><div class="activity">⛪ <a class="location-link" href="https://www.google.com/maps/search/St.+Mary%E2%80%99s+Basilica+Krakow" target="_blank">St. Mary’s Basilica interior & organ concerts</a> <span class="hours">(10:00–17:00; Concerts at 15:00 & 18:00)</span></div><div class="description">Gothic church famed for its wooden altarpiece and live organ performances.</div></div><div class="itinerary-item optional"><div class="activity">🚤 <a class="location-link" href="https://www.google.com/maps/search/Evening+Vistula+boat+cruise+Krakow" target="_blank">Evening Vistula boat cruise</a> <span class="hours">(18:00–20:00)</span></div><div class="description">Sunset cruise along the Vistula River with city-lit views.</div></div></div>
+<div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Airport SIM cards: Orange or Play networks offer best coverage</li>
+<li>Żabka convenience stores are great for snacks/water (open late)</li>
+<li>Evening temperatures: 20–22°C – light jacket recommended</li>
+<li>Effort level: <span class="activity-highlight">Light walking (1-2 km)</span></li>
+</ul>
+</div></div>
+<!-- Updated Day 2 -->
+<div class="day-section" id="Day_2">
+<h2><i class="fas fa-landmark"></i> Day 2 – Aug 8 (Thu): Wawel Castle & Shopping</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Avanti+Palazzo+Boutique+Hotel+Krakow&destination=Ottamam+Krakow&mode=driving&waypoints=Vistula+River+Boat+Ride+Krakow|Bonarka+City+Center|Main+Market+Square+Krakow&zoom=12" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:00</div>
+<div class="activity">Depart hotel</div>
+</div><div class="itinerary-item">
+<div class="time">10:30</div>
+<div class="activity">🎟 <a class="location-link" href="https://www.google.com/maps/search/Wawel+Castle+Krakow" target="_blank">Wawel Castle</a> <span class="hours">(09:30–17:00)</span></div>
+</div><div class="description">Historic royal complex dating back to the 14th century, featuring State Rooms, Wawel Cathedral, and the Dragon’s Den. Guided tours highlight Renaissance courtyards, royal tombs, and artistic masterpieces.</div><div class="itinerary-item">
+<div class="time">13:00</div>
+<div class="activity">🚤 <a class="location-link" href="https://www.google.com/maps/search/Vistula+River+Boat+Ride+Krakow" target="_blank">Vistula River Boat Ride</a> <span class="hours">(10:00–19:00)</span></div>
+</div><div class="description">Scenic cruise along the Vistula River offering panoramic views of Wawel Castle, the medieval stone bridge, and lush riverside parks. Includes live commentary in English and Polish, with optional hop-on/hop-off stops in the vibrant Kazimierz district.</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">🛍 <a class="location-link" href="https://www.google.com/maps/search/Bonarka+City+Center+Krakow" target="_blank">Bonarka City Center</a> <span class="hours">(09:00–21:00)</span></div>
+</div><div class="description">One of Kraków’s largest malls with over 200 shops covering Polish designers and international brands, plus a cinema, food court, and regular cultural events.</div><div class="itinerary-item">
+<div class="time">18:00</div>
+<div class="activity">🌆 Explore activities at <a class="location-link" href="https://www.google.com/maps/search/Old+Town+Krakow" target="_blank">Kraków Old Town</a></div>
+</div><div class="description">UNESCO World Heritage site with cobblestone streets, hidden courtyards, and vibrant nightlife. Spot local artisans, street musicians, and historic landmarks at every turn.</div><div class="itinerary-item">
+<div class="time">20:00</div>
+<div class="activity">🍽 Dinner at <a class="location-link" href="https://www.google.com/maps/search/Ottamam+Krakow" target="_blank">Ottamam</a></div>
+</div></div>
+<div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Must-book: <a class="booking-link" href="https://wawel.krakow.pl/en/visit/tickets" target="_blank">Wawel Dragon's Den tickets</a> (kids favorite!)</li>
+<li>Bonarka: Teen-friendly shopping with international brands</li>
+<li>Evening in Old Town: Street performers and live music common in summer</li>
+<li>Effort level: <span class="activity-highlight">Moderate (shopping and walking)</span></li>
+</ul>
+</div></div>
+<!-- Day 3 -->
+<div class="day-section" id="Day_3">
+<h2><i class="fas fa-torii-gate"></i> Day 3 – Aug 9 (Fri): Energylandia Theme Park</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Avanti+Palazzo+Boutique+Hotel+Krakow&destination=Energylandia&mode=driving&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:00</div>
+<div class="activity">Drive to <a class="location-link" href="https://www.google.com/maps/search/Energylandia+Theme+Park" target="_blank">Energylandia</a> <span class="hours">(10:00–20:00)</span></div>
+</div><div class="description">Central Europe’s largest amusement park, featuring over 100 attractions including roller coasters, water slides, and themed zones for all ages.</div><div class="itinerary-item">
+<div class="time">11:00</div>
+<div class="activity">Rides & water attractions</div>
+</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">🍱 Lunch at park</div>
+</div></div><div class="optional-visits"><h3 style="font-weight:bold; background-color:#f9f9f9; padding:8px; border-radius:4px; margin-bottom:8px;white-space:nowrap; width:100%;">Optional Visits</h3><div class="itinerary-item optional"><div class="activity">🏍️ <a class="location-link" href="https://www.google.com/maps/search/Quad-bike+tours+Zator" target="_blank">Quad-bike tours near the park</a><span class="hours"> (09:00–18:00)</span></div><div class="description">Off-road fun for teens and adults on dirt trails around Zator.</div></div></div><div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Top teen rides: Hyperion, Zadra, Abyssus</li>
+<li>Water zone: Bring quick-dry clothes & waterproof phone case</li>
+<li>Halal option: Vega Bar (vegetarian burgers)</li>
+<li>Fast Pass: Essential for popular rides - <a class="booking-link" href="https://energylandia.pl/en/tickets" target="_blank">book online</a></li>
+<li>Effort level: <span class="activity-highlight">High (lots of walking/queues)</span></li>
+</ul>
+</div></div>
+<!-- Day 4 -->
+<div class="day-section" id="Day_4">
+<h2><i class="fas fa-mountain"></i> Day 4 – Aug 10 (Sat): Salt Mine & Zakopane Transfer</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Avanti+Palazzo+Boutique+Hotel+Krakow&destination=Aries+Hotel+and+Spa+Zakopane&mode=driving&waypoints=Karczma+Halit+Wieliczka|Krupowki+Street+Zakopane&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:00</div>
+<div class="activity"><a class="location-link" href="https://www.google.com/maps/search/Wieliczka+Salt+Mine" target="_blank">Wieliczka Salt Mine</a> <span class="hours">(09:00–17:00)</span></div>
+</div><div class="description">UNESCO-listed underground mine with stunning salt-carved chambers, chapels, and a subterranean lake. Guided tours reveal centuries-old mining techniques and folklore.</div><div class="itinerary-item">
+<div class="time">13:00</div>
+<div class="activity">🍽 Lunch at <a class="location-link" href="https://www.google.com/maps/search/Karczma+Halit+Wieliczka" target="_blank">Karczma Halit</a></div>
+</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">Drive to Zakopane</div>
+</div><div class="itinerary-item">
+<div class="time">18:00</div>
+<div class="activity"><a class="location-link" href="https://www.google.com/maps/search/Krupowki+Street+Zakopane" target="_blank">Krupówki Street</a> <span class="hours">(shops: 09:00–21:00)</span></div>
+</div><div class="description">Bustling pedestrian promenade in Zakopane lined with souvenir stalls, restaurants, and street performers. Perfect for tasting oscypek cheese and shopping local crafts.</div><div class="itinerary-item">
+<div class="time">19:00</div>
+<div class="activity">🏨 Check-in at <a class="location-link" href="https://www.google.com/maps/search/Aries+Hotel+and+Spa+Zakopane" target="_blank">Aries Hotel & Spa</a></div>
+</div></div><div class="optional-visits"><h3 style="font-weight:bold; background-color:#f9f9f9; padding:8px; border-radius:4px; margin-bottom:8px;white-space:nowrap; width:100%;">Optional Visits</h3><div class="itinerary-item optional"><div class="activity">🚡 <a class="location-link" href="https://www.google.com/maps/search/Polana+Szymoszkowa+Cable+Car+Zakopane" target="_blank">Polana Szymoszkowa cable car</a><span class="hours"> (09:00–18:00)</span></div><div class="description">Scenic cable car ride with views of the Gubałówka ridge and Tatras.</div></div><div class="itinerary-item optional"><div class="activity">🎢 <a class="location-link" href="https://www.google.com/maps/search/Butorowy+Wierch+Chairlift+Zakopane" target="_blank">Butorowy Wierch chairlift</a><span class="hours"> (09:00–17:30)</span></div><div class="description">Slow-paced open-air chairlift with panoramic views over Zakopane.</div></div></div><div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Salt mine: Book <a class="booking-link" href="https://www.wieliczka-saltmine.com/individual-tourist/tourist-route" target="_blank">"Tourist Route"</a> (most impressive)</li>
+<li>Teen highlight: Underground salt lake with light show</li>
+<li>Zakopane drive: Road DK7 often congested - use navigation apps</li>
+<li>Krupówki must-try: Oscypek grilled cheese (vegetarian)</li>
+<li>Effort level: <span class="activity-highlight">Moderate (800 steps down in mine)</span></li>
+</ul>
+</div></div>
+<!-- Day 5 -->
+<div class="day-section" id="Day_5">
+<h2><i class="fas fa-flag"></i> Day 5 – Aug 11 (Sun): Slovakia Adventure Day</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Aries+Hotel+and+Spa+Zakopane&destination=Belianska+Cave+Slovakia&mode=driving&waypoints=Pension+Sova+Zdiar|Zdiar+Slovakia&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:00</div>
+<div class="activity"><a class="location-link" href="https://www.google.com/maps/search/Bachledka+Treetop+Walk+Slovakia" target="_blank">Bachledka Treetop Walk</a> <span class="hours">(09:00–17:00)</span></div>
+</div><div class="description">Elevated walkway through forest canopy, offering panoramic views of the Tatras and interactive educational stations.</div><div class="itinerary-item">
+<div class="time">13:00</div>
+<div class="activity">🍽 Lunch at <a class="location-link" href="https://www.google.com/maps/search/Pension+Sova+Zdiar" target="_blank">Pension Sova</a></div>
+</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">🏘️ <a class="location-link" href="https://www.google.com/maps/search/Zdiar+Village+Slovakia" target="_blank">Ždiar Village</a></div>
+</div><div class="description">Picturesque highland village known for its wooden cottages, Goral folk traditions, and scenic mountain vistas.</div><div class="itinerary-item">
+<div class="time">15:30</div>
+<div class="activity">🕳️ <a class="location-link" href="https://www.google.com/maps/search/Belianska+Cave+Slovakia" target="_blank">Belianska Cave</a> <span class="hours">(tours hourly 09:00–16:00)</span></div>
+</div><div class="description">Karst cave system featuring dripstone formations, grand chambers, and guided tours explaining its geological history.</div></div><div class="optional-visits"><h3 style="font-weight:bold; background-color:#f9f9f9; padding:8px; border-radius:4px; margin-bottom:8px;white-space:nowrap; width:100%;">Optional Visits</h3><div class="itinerary-item optional"><div class="activity">🌄 <a class="location-link" href="https://www.google.com/maps/search/Belianska+Cave+Trail+Slovakia" target="_blank">Belianska Cave additional trail</a><span class="hours"> (08:00–17:00)</span></div><div class="description">Nature trail around the cave area offering scenic vistas and fresh mountain air.</div></div></div><div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Border crossing: Bring passports (no visa needed for EU)</li>
+<li>Currency: Slovakia uses Euros - withdraw small amount</li>
+<li>Teen activity: Treetop slide (<a class="booking-link" href="https://bachledka.sk/en/" target="_blank">book online</a> for discount)</li>
+<li>Cave tip: English tours at 11:00 & 14:00</li>
+<li>Effort level: <span class="activity-highlight">Moderate (cave has 900 steps)</span></li>
+</ul>
+</div></div>
+<!-- Day 6 -->
+<div class="day-section" id="Day_6">
+<h2><i class="fas fa-mountains"></i> Day 6 – Aug 12 (Mon): Mountain Views & Zakopane Fun</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Aries+Hotel+and+Spa+Zakopane&destination=Chocholow+Thermal+Baths&mode=driving&waypoints=Kasprowy+Wierch+Cable+Car|Gubalowka+Zakopane|Upside+Down+House+Zakopane&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:30</div>
+<div class="activity">🚠 🚡 <a class="location-link" href="https://www.google.com/maps/search/Kasprowy+Wierch+Cable+Car" target="_blank">Kasprowy Wierch Cable Car</a> <span class="hours">(08:00–17:00)</span></div>
+</div><div class="description">Panoramic cable car ascent to Kasprowy Wierch peak, offering 360° views of the Tatra range and hiking trails.</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">🚡 <a class="location-link" href="https://www.google.com/maps/search/Gubalowka+Funicular+Zakopane" target="_blank">Gubałówka Funicular</a> <span class="hours">(09:00–21:00)</span></div>
+</div><div class="description">Historic funicular ride to Gubałówka Hill, with summit viewpoints, market stalls, and family-friendly attractions.</div><div class="itinerary-item">
+<div class="time">15:00</div>
+<div class="activity"><a class="location-link" href="https://www.google.com/maps/search/Upside+Down+House+Zakopane" target="_blank">Upside Down House</a> <span class="hours">(10:00–20:00)</span></div>
+</div><div class="description">Whimsical house where rooms are built inverted, creating fun photo ops and optical illusions.</div></div><div class="optional-visits"><h3 style="font-weight:bold; background-color:#f9f9f9; padding:8px; border-radius:4px; margin-bottom:8px;white-space:nowrap; width:100%;">Optional Visits</h3><div class="itinerary-item optional"><div class="activity">🦜 <a class="location-link" href="https://www.google.com/maps/search/Parrot+Zoo+Zakopane" target="_blank">Parrot Zoo</a><span class="hours"> (10:00–17:00)</span></div><div class="description">Colorful parrots and exotic birds up-close—fun and educational.</div></div><div class="itinerary-item optional"><div class="activity">🎭 <a class="location-link" href="https://www.google.com/maps/search/Illusion+Park+Zakopane" target="_blank">Illusion Park</a><span class="hours"> (10:00–18:00)</span></div><div class="description">Mind-bending illusions and interactive exhibits for all ages.</div></div><div class="itinerary-item optional"><div class="activity">🐠 <a class="location-link" href="https://www.google.com/maps/search/Underwater+World+Aquarium+Zakopane" target="_blank">Underwater World aquarium</a><span class="hours"> (09:00–18:00)</span></div><div class="description">Indoor exhibit of freshwater and exotic fish tanks in central Zakopane.</div></div><div class="itinerary-item optional"><div class="activity">🏛️ <a class="location-link" href="https://www.google.com/maps/search/Tatra+Museum+Zakopane" target="_blank">Tatra Museum</a><span class="hours"> (10:00–16:00)</span></div><div class="description">Museum on Tatra history, mountain culture, and Goral folklore.</div></div></div><div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Cable car: <a class="booking-link" href="https://www.pkl.pl/en/tickets/" target="_blank">Book for 10:30 slot</a> to avoid morning crowds</li>
+<li>Mountain weather: Can change rapidly - pack layers</li>
+<li>Teen favorite: Gubałówka mountain carts (extra fee)</li>
+<li>Dinner option: Try regional trout at restaurant near funicular</li>
+<li>Effort level: <span class="activity-highlight">Light to moderate</span></li>
+</ul>
+</div></div>
+<!-- Day 7 -->
+<div class="day-section" id="Day_7">
+<h2><i class="fas fa-hiking"></i> Day 7 – Aug 13 (Tue): Morskie Oko Adventure</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Aries+Hotel+and+Spa+Zakopane&destination=Parking+Palenica+Białczańska&mode=driving&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="warning-box">
+<h3 class="warning-title"><i class="fas fa-exclamation-triangle"></i> Parking Reservation Required</h3>
+<p>You <b>must</b> book parking at least 3 days in advance through the official Tatra National Park website:</p>
+<p style="margin:10px 0; font-weight:bold;">
+<a class="booking-link" href="https://tpn.gov.pl/parkingi-morskie-oko" style="color:#d35400;" target="_blank">
+          https://tpn.gov.pl/parkingi-morskie-oko
+        </a>
+</p>
+<ul>
+<li>Booking opens 14 days before your visit date</li>
+<li>Select "Parking Palenica Białczańska"</li>
+<li>Print confirmation or save digital ticket - no reservation = no entry</li>
+</ul>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">10:00</div>
+<div class="activity">Drive to 🌳 <a class="location-link" href="https://www.google.com/maps/search/Parking+Palenica+Bialczanska" target="_blank">Palenica Białczańska Parking</a> <span class="hours">(official trailhead)</span></div>
+</div><div class="itinerary-item">
+<div class="time">10:45</div>
+<div class="activity">Hike to <a class="location-link" href="https://www.google.com/maps/search/Morskie+Oko+Lake" target="_blank">Morskie Oko</a> <span class="hours">(2-hour hike or horse cart)</span></div>
+</div><div class="description">Glacial lake at the foot of Rysy Peak surrounded by forested trails and dramatic mountain scenery. A must-see natural wonder in the Tatras.</div><div class="itinerary-item">
+<div class="time">13:00</div>
+<div class="activity">🍽 Lunch at mountain shelter</div>
+</div></div>
+<div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Parking hours: 7:00-19:00 (arrive before 9:00 AM)</li>
+<li>Parking rates: 
+          <ul style="margin-top:5px">
+<li>Passenger cars: 25 PLN (all day)</li>
+<li>Minibuses: 50 PLN</li>
+<li>Motorcycles: 10 PLN</li>
+</ul>
+</li>
+<li>Horse cart option: 100 PLN/person one way (cash only)</li>
+<li>Trail condition: Paved but steep - hiking shoes essential</li>
+<li>Effort level: <span class="activity-highlight">High (9 km hike, 450m elevation)</span></li>
+</ul>
+</div></div>
+<!-- Day 8 -->
+<div class="day-section" id="Day_8">
+<h2><i class="fas fa-water"></i> Day 8 – Aug 14 (Wed): Dunajec River Rafting</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Aries+Hotel+and+Spa+Zakopane&destination=Gugu+Rope+Park+Szczawnica&mode=driving&waypoints=Szczawnica+Restaurants&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">11:00</div>
+<div class="activity">🛶 <a class="location-link" href="https://www.google.com/maps/search/Dunajec+River+Rafting" target="_blank">Traditional raft ride</a> <span class="hours">(2-hour journey)</span></div>
+</div><div class="description">Leisurely wooden raft journey along the Dunajec River gorge, guided by expert raftmen singing folk songs.</div><div class="itinerary-item">
+<div class="time">14:30</div>
+<div class="activity">Optional: 🌳 <a class="location-link" href="https://www.google.com/maps/search/Gugu+Rope+Park+Szczawnica" target="_blank">Gugu Rope Park</a> <span class="hours">(09:00–19:00)</span></div>
+</div><div class="description">Adventure park offering rope courses, zip-lines, and obstacle challenges set in the forest canopy.</div></div>
+<div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Rafting: <a class="booking-link" href="https://www.flisacy.com.pl/en/" target="_blank">Book through hotel</a> for English-speaking guide</li>
+<li>Clothing: Quick-dry clothes & waterproof bags for phones</li>
+<li>Teen option: Rope park has difficulty levels (blue=easiest)</li>
+<li>Lunch spot: Restauracja Nad Przełomem with river view</li>
+<li>Effort level: <span class="activity-highlight">Light (rafting is relaxing)</span></li>
+</ul>
+</div></div>
+<!-- Updated Day 9 -->
+<div class="day-section" id="Day_9">
+<h2><i class="fas fa-plane-departure"></i> Day 9 – Aug 15 (Thu): Return & Departure</h2>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC5sApDFEOBVvhK-2_3CAbClIwylmUOhnw&origin=Aries+Hotel+and+Spa+Zakopane&destination=Krakow+Airport&mode=driving&waypoints=Orlen+Kamienkiego+Krakow&zoom=11" style="border:0;"></iframe>
+</div>
+<div class="main-visits-wrapper"><div class="itinerary-item">
+<div class="time">09:00</div>
+<div class="activity">🚗 Drive from Zakopane to Kraków Airport. It's a holiday go early. </div>
+</div><div class="itinerary-item">
+<div class="time">12:30</div>
+<div class="activity">⛽ Gas stop at <a class="location-link" href="https://www.google.com/maps/search/Orlen+Kamienkiego+Krakow" target="_blank">Orlen Kamienkiego</a> <span class="hours">(open 24/7)</span></div>
+</div><div class="itinerary-item">
+<div class="time">13:00</div>
+<div class="activity">🚘 Return rental car</div>
+</div><div class="itinerary-item">
+<div class="time">14:00</div>
+<div class="activity">✈️ Airport check-in for 18:00 departure</div>
+</div></div>
+<div class="tips">
+<b>Day-Specific Tips:</b>
+<ul>
+<li>Travel time: Approx 2.5 hours (allow extra for holiday traffic)</li>
+<li>Gas station: Fill up within 10km of airport for best rates</li>
+<li>Rental return: Take photos of car condition before return</li>
+<li>Airport security: Arrive 4 hours early for international flight</li>
+<li>Teen tip: Download movies/shows for flight entertainment</li>
+<li>Effort level: <span class="activity-highlight">Light (mostly driving)</span></li>
+</ul>
+</div></div>
+<!-- Essential Trip Guide -->
+<div style="background:#f8f9fa; padding:25px; border-radius:12px; border:1px solid #eee; margin-top:30px;">
+<h2 style="background:#2c3e50; color:white; padding:15px; border-radius:8px; margin-top:0;">Essential Trip Guide</h2>
+<div class="warning-box">
+<h3 class="warning-title"><i class="fas fa-exclamation-circle"></i> Critical Booking Alert</h3>
+<h4 class="warning-title">Morskie Oko Parking Reservation</h4>
+<p><b>Must be booked 3+ days in advance</b> via official Tatra National Park website:</p>
+<p style="margin:15px 0; font-weight:bold; text-align: center;">
+<a class="booking-link" href="https://tpn.gov.pl/parkingi-morskie-oko" style="color:#d35400; font-size: 1.1em;" target="_blank">
+          https://tpn.gov.pl/parkingi-morskie-oko
+        </a>
+</p>
+<ul>
+<li>Booking opens 14 days before visit date</li>
+<li>Select "Parking Palenica Białczańska"</li>
+<li>Print confirmation or save digital ticket</li>
+<li>Without reservation, access will be denied</li>
+</ul>
+</div>
+<h3><i class="fas fa-calendar-check"></i> Pre-Trip Preparation Timeline</h3>
+<div class="timeline">
+<div class="timeline-item">
+<h4>3+ Months Before</h4>
+<ul>
+<li>Book flights and hotels</li>
+<li>Apply for Schengen visa if needed</li>
+</ul>
+</div>
+<div class="timeline-item">
+<h4>1 Month Before</h4>
+<ul>
+<li><a class="booking-link" href="https://wawel.krakow.pl/en/visit/tickets" target="_blank">Wawel Castle tickets</a></li>
+<li><a class="booking-link" href="https://www.wieliczka-saltmine.com/individual-tourist/tourist-route" target="_blank">Wieliczka Salt Mine tour</a></li>
+<li><a class="booking-link" href="https://energylandia.pl/en/tickets" target="_blank">Energylandia tickets + Fast Pass</a></li>
+</ul>
+</div>
+<div class="timeline-item">
+<h4>2 Weeks Before</h4>
+<ul>
+<li><a class="booking-link" href="https://www.pkl.pl/en/tickets/" target="_blank">Kasprowy Wierch Cable Car</a></li>
+<li><a class="booking-link" href="https://www.flisacy.com.pl/en/" target="_blank">Dunajec River Rafting</a></li>
+<li><a class="booking-link" href="https://bachledka.sk/en/" target="_blank">Bachledka Slide tickets</a></li>
+</ul>
+</div>
+<div class="timeline-item">
+<h4>3 Days Before</h4>
+<ul>
+<li><b><a class="booking-link" href="https://tpn.gov.pl/parkingi-morskie-oko" target="_blank">Morskie Oko Parking</a></b></li>
+<li>Restaurant reservations</li>
+</ul>
+</div>
+</div>
+<h3><i class="fas fa-info-circle"></i> Morskie Oko Specific Tips</h3>
+<ul>
+<li><b>Best Hiking Times:</b> Start ascent by 10:00 AM to avoid crowds</li>
+<li><b>Trail Conditions:</b>
+<ul>
+<li>Paved road suitable for strollers/wheelchairs</li>
+<li>Steeper section to Czarny Staw (requires proper shoes)</li>
+</ul>
+</li>
+<li><b>Weather Preparation:</b>
+<ul>
+<li>Check forecast at <a class="booking-link" href="https://tatrometeo.pl" target="_blank">tatrometeo.pl</a></li>
+<li>Mountain weather changes rapidly - pack layers</li>
+</ul>
+</li>
+<li><b>Facilities:</b>
+<ul>
+<li>Toilets at parking and mountain shelter</li>
+<li>Potable water available at shelter</li>
+</ul>
+</li>
+</ul>
+<h3><i class="fas fa-lightbulb"></i> General Travel Tips</h3>
+<ul>
+<li><b>Clothing:</b> Summer layers for daytime (20–28°C Kraków), warm jackets/raincoats for mountains, comfortable hiking shoes, swimwear for Energylandia</li>
+<li><b>Tickets:</b> Book Wawel Castle, Energylandia, Kasprowy Wierch Cable Car, and rafting at least 1 week ahead; Pre-book Wieliczka Salt Mine; Bachledka slide tickets (5 EUR) available online</li>
+<li><b>Weather:</b> Afternoon showers possible in August - carry an umbrella; Kraków ~25–28°C, Zakopane ~15–22°C; mountain peaks ~8–15°C</li>
+<li><b>Effort Levels:</b>
+<ul>
+<li>Easy Days: 1, 8, 9</li>
+<li>Moderate Days: 2, 4, 5, 6</li>
+<li>High Effort Days: 3 (park walking), 7 (hike)</li>
+</ul>
+</li>
+<li><b>Money & Connectivity:</b> PLN cash needed for parking, horse carts, and local vendors; Orange/Play SIM cards available at airport</li>
+<li><b>Food & Halal Dining:</b> Hammam Szeherezada; Use Google Maps filter 'Halal' for more options</li>
+<li><b>Driving & Parking:</b> Zakopane parking fills by 10:00 AM; Fuel up at BP Zakopiańska before mountain drives</li>
+</ul>
+</div>
+<div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px solid #eee; color: #777;">
+<p>Poland Itinerary © 2025 | Created with ❤️ for your family adventure</p>
+</div>
+
+
+</html>
+
+
+
+
+
+
+
+
+</html>
